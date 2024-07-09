@@ -20,15 +20,17 @@ import java.util.Map;
 @AllArgsConstructor
 @Entity
 @Table(name = "CASE_ADMIN")
-public class AdminEntity {
-
+public class AdminEntity extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "ID")
     private String id;
 
-    @Column(name="EMAIL")
+    @Column(name = "EMAIL")
     private String email;
+
+    @Column(name = "PASSWORD")
+    private String password;
 
     @Column(name = "FIRST_NAME")
     private String firstName;
@@ -42,7 +44,6 @@ public class AdminEntity {
     )
     private String phoneNumber;
 
-
     @Builder.Default
     @Enumerated(EnumType.STRING)
     private UserType userType = UserType.ADMIN;
@@ -50,7 +51,6 @@ public class AdminEntity {
     @Builder.Default
     @Enumerated(EnumType.STRING)
     private UserStatus userStatus = UserStatus.ACTIVE;
-
 
     public Map<String, Object> getClaims() {
 
