@@ -1,4 +1,4 @@
-package com.springboot.springbootsecurity.auth.model.dto.request;
+package com.springboot.springbootsecurity.admin.model.dto.request;
 
 
 import jakarta.validation.constraints.Email;
