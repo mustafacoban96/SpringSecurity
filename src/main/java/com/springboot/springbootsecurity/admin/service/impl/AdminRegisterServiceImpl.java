@@ -38,8 +38,8 @@ public class AdminRegisterServiceImpl implements AdminRegisterService{
 
         adminEntityToBeSave.setPassword(passwordEncoder.encode(adminRegisterRequest.getPassword()));
 
-        adminRepository.save(adminEntityToBeSave);
+        AdminEntity savedAdminEntity =  adminRepository.save(adminEntityToBeSave);
 
-        return adminEntityToAdminMapper.map(adminEntityToBeSave);
+        return adminEntityToAdminMapper.map(savedAdminEntity);
     }
 }
