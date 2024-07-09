@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum TokenClaims {
 
+
+    JWT_ID("jti"),
     USER_ID("userId"),
     USER_TYPE("userType"),
     USER_STATUS("userStatus"),
